@@ -1,0 +1,48 @@
+/* ==========================================================
+   RESUME.CSS - styles for resume.html only
+   ========================================================== */
+
+.resume-hero { background: var(--forest); color: var(--ivory); padding-block: 48px; }
+.resume-hero p:not(.eyebrow) { max-width: 58ch; color: rgba(245,240,231,.85); }
+.resume-hero .btn { margin-top: 8px; }
+
+/* In-page section switcher */
+.subnav { background: var(--ivory); border-bottom: 1px solid rgba(40,43,42,.12); }
+.subnav .container { display: flex; gap: 24px; }
+.subnav a { padding: 14px 0; font-size: .85rem; font-weight: 600; border-bottom: 2px solid transparent; }
+.subnav a:hover { border-bottom-color: var(--gold); }
+
+.block { padding-block: 56px; scroll-margin-top: 110px; }
+.block .lead { color: var(--stone); max-width: 55ch; }
+
+/* Project filter buttons */
+.filters { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0 28px; }
+.filter {
+  font: 600 .8rem var(--font-body); padding: 9px 16px; border-radius: 999px; cursor: pointer;
+  border: 1px solid rgba(40,43,42,.3); background: transparent; color: var(--charcoal);
+}
+.filter[aria-pressed="true"] { background: var(--forest); color: var(--ivory); border-color: var(--forest); }
+
+/* Projects */
+.project-grid { display: grid; gap: 28px; }
+.project[hidden] { display: none; }
+.project .media { aspect-ratio: 4 / 3; }
+.project .tag { font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: #8a7350; margin: 14px 0 4px; }
+.project h3 { margin-bottom: .3em; }
+.project > p { color: #4a4f4c; font-size: .92rem; }
+
+/* Education */
+.edu-list { list-style: none; margin: 24px 0 0; padding: 0; display: grid; gap: 20px; }
+.edu { padding: 22px; border: 1px solid rgba(40,43,42,.18); border-radius: var(--radius); background: rgba(255,255,255,.4); }
+.edu h3 { margin-bottom: .2em; }
+.edu .meta { color: var(--stone); font-size: .88rem; margin-bottom: .6em; }
+.edu p:last-child { margin: 0; color: #4a4f4c; font-size: .92rem; }
+.certs { margin-top: 28px; }
+.certs ul { margin: 8px 0 0; padding-left: 1.2rem; color: #4a4f4c; }
+
+@media (min-width: 640px) {
+  .project-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 900px) {
+  .edu-list { grid-template-columns: 1fr 1fr; }
+}

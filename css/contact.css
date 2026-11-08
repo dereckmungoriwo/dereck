@@ -1,0 +1,51 @@
+/* ==========================================================
+   CONTACT.CSS - styles for contact.html only
+   ========================================================== */
+
+.contact-hero { background: var(--forest); color: var(--ivory); padding-block: 48px; }
+.contact-hero p:not(.eyebrow) { max-width: 55ch; color: rgba(245,240,231,.85); margin: 0; }
+
+.contact-section { padding-block: 56px; }
+.contact-grid { display: grid; gap: 40px; }
+
+/* Contact channels */
+.channels { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; align-content: start; }
+.channel {
+  display: flex; align-items: center; gap: 16px; padding: 18px;
+  border: 1px solid rgba(40,43,42,.18); border-radius: var(--radius); background: rgba(255,255,255,.45);
+  transition: border-color .2s, transform .2s;
+}
+.channel:hover { border-color: var(--gold); }
+.channel .logo { width: 44px; height: 44px; flex: none; display: grid; place-items: center; border-radius: 12px; background: var(--forest); }
+.channel .logo.brand { background: #fff; border: 1px solid rgba(40,43,42,.12); }
+.channel .logo img { width: 24px; height: 24px; }
+.channel .label { font-size: .75rem; color: var(--stone); letter-spacing: .04em; text-transform: uppercase; display: block; }
+.channel .value { font-weight: 600; word-break: break-word; }
+
+/* Form */
+.form-card { padding: 24px; border: 1px solid rgba(40,43,42,.18); border-radius: var(--radius); background: rgba(255,255,255,.55); }
+.form-card h2 { font-size: 1.5rem; }
+.field { margin-bottom: 18px; }
+.field label { display: block; font-size: .85rem; font-weight: 600; margin-bottom: 6px; }
+.field input, .field select, .field textarea {
+  width: 100%; padding: 12px 14px; font: inherit; color: var(--charcoal);
+  background: var(--ivory); border: 1px solid rgba(40,43,42,.3); border-radius: var(--radius-sm);
+}
+.field textarea { min-height: 150px; resize: vertical; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: 2px solid var(--gold); border-color: var(--gold); }
+.field.invalid input, .field.invalid textarea, .field.invalid select { border-color: #b3261e; }
+.error { display: none; color: #b3261e; font-size: .8rem; margin-top: 4px; }
+.field.invalid .error { display: block; }
+.hp { position: absolute; left: -9999px; }   /* spam trap, keep hidden */
+
+.form-status { margin-top: 16px; padding: 12px 14px; border-radius: var(--radius-sm); font-size: .9rem; display: none; }
+.form-status.show { display: block; }
+.form-status.ok { background: rgba(37,211,102,.15); color: #14532d; }
+.form-status.err { background: rgba(179,38,30,.12); color: #7a1a15; }
+.form-card button.btn { width: 100%; }
+.form-card button.btn:disabled { opacity: .6; cursor: wait; }
+
+@media (min-width: 860px) {
+  .contact-grid { grid-template-columns: 5fr 6fr; gap: 56px; }
+  .form-card { padding: 32px; }
+}

@@ -1,0 +1,43 @@
+/* ==========================================================
+   ABOUT.CSS - styles for about.html only
+   ========================================================== */
+
+/* Intro: portrait + short bio */
+.about-hero { background: var(--forest); color: var(--ivory); padding-block: 48px; }
+.about-hero-grid { display: grid; gap: 28px; align-items: center; }
+.about-hero .media { aspect-ratio: 4 / 5; max-width: 420px; }
+.about-hero .media img { object-position: center 20%; }
+.about-hero p:not(.eyebrow) { color: rgba(245,240,231,.85); max-width: 55ch; }
+
+/* Story sections */
+.story { padding-block: 48px; }
+.story-grid { display: grid; gap: 24px; }
+.story h2 { margin-bottom: .4em; }
+.story p { color: #4a4f4c; max-width: 60ch; }
+.story .media { aspect-ratio: 4 / 3; }
+
+/* Pull quote linking the two careers */
+.bridge { background: var(--forest); color: var(--ivory); padding-block: 56px; }
+.bridge blockquote { margin: 0; max-width: 28ch; font-family: var(--font-head); font-size: clamp(1.5rem, 4.5vw, 2.4rem); line-height: 1.3; }
+
+/* Interests */
+.interests { padding-block: 48px; }
+.chips { list-style: none; margin: 16px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.chips li { padding: 8px 16px; border: 1px solid rgba(40,43,42,.3); border-radius: 999px; font-size: .9rem; }
+
+/* Goals */
+.goals { padding-block: 48px; }
+.goal-list { display: grid; gap: 20px; margin-top: 20px; }
+.goal { padding: 20px; border: 1px solid rgba(40,43,42,.18); border-radius: var(--radius); background: rgba(255,255,255,.4); }
+.goal h3 { margin-bottom: .3em; }
+.goal p { margin: 0; color: var(--stone); font-size: .92rem; }
+
+.about-cta { padding-block: 48px; }
+
+@media (min-width: 760px) {
+  .about-hero { padding-block: 72px; }
+  .about-hero-grid { grid-template-columns: 5fr 6fr; gap: 56px; }
+  .story-grid { grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+  .story.flip .media { order: 2; }
+  .goal-list { grid-template-columns: repeat(3, 1fr); }
+}
