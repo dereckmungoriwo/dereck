@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Name | Personal Portfolio</title>
+  <meta name="description" content="A journey of creativity, technology and growth: from professional pastry to IT.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+  <!-- HEADER (copy this block to every page) -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-top">
+        <a class="brand" href="index.html">Your Name.</a>
+        <span class="header-meta">Portfolio / 2026</span>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+      </div>
+      <nav class="main-nav" id="nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="journey.html">Journey</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero on-dark">
+      <div class="container">
+        <p class="eyebrow">Welcome to my personal space</p>
+        <h1>A Journey of Creativity, Technology &amp; Growth.</h1>
+        <p class="hero-lead">From professional culinary arts to Information Technology, my journey is shaped by curiosity, creativity and a commitment to continuous growth.</p>
+        <div class="media hero-media">
+          <img src="images/profile.jpg" alt="Portrait of Your Name" onerror="this.style.display='none'"><button class="save-btn" data-id="hero" aria-label="Save image" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button>
+          
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="journey.html">Explore my journey &rarr;</a>
+          <a class="btn btn-outline" href="resume.html">View my work</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRODUCTION -->
+    <section class="intro" id="intro">
+      <div class="container">
+        <p class="eyebrow">01 / Introduction</p>
+        <h2>More than one career. One continuous journey.</h2>
+        <p>I began my professional journey in the culinary industry, where I developed my craft as a pastry chef. My curiosity and passion for learning eventually led me into Information Technology, opening a new chapter of professional growth.</p>
+      </div>
+    </section>
+    <hr class="divider">
+
+    <!-- PROFESSIONAL PATH -->
+    <section class="path">
+      <div class="container">
+        <p class="eyebrow">02 / My professional path</p>
+        <div class="card-grid">
+          <article class="card">
+            <div class="media"><img src="images/culinary.jpg" alt="Plated pastry dessert" onerror="this.style.display='none'"><button class="save-btn" data-id="path-culinary" aria-label="Save image" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button></div>
+            <h3>Culinary Arts</h3>
+            <p>6 years of professional pastry experience.</p>
+          </article>
+          <article class="card">
+            <div class="media"><img src="images/technology.jpg" alt="Developer working on a laptop" onerror="this.style.display='none'"><button class="save-btn" data-id="path-tech" aria-label="Save image" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button></div>
+            <h3>Technology</h3>
+            <p>IT graduate with freelance experience.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <hr class="divider">
+
+    <!-- SELECTED WORK -->
+    <section class="selected">
+      <div class="container">
+        <p class="eyebrow">03 / Selected work</p>
+        <h2>A collection of what I create.</h2>
+        <p class="lead">Explore projects across technology and culinary arts.</p>
+        <div class="card-grid">
+          <a class="card" href="resume.html#it">
+            <div class="media"><img src="images/work-it.jpg" alt="IT project on a laptop and monitor" onerror="this.style.display='none'"><button class="save-btn" data-id="work-it" aria-label="Save image" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button></div>
+          </a>
+          <a class="card" href="resume.html#culinary">
+            <div class="media"><img src="images/work-culinary.jpg" alt="Chocolate pastry creation" onerror="this.style.display='none'"><button class="save-btn" data-id="work-culinary" aria-label="Save image" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button></div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (copy this block to every page) -->
+  <footer class="site-footer">
+    <div class="container">
+      <h2>Every chapter has shaped who I am.</h2>
+      <p>Thank you for being part of my journey.</p>
+      <a class="connect" href="contact.html">Let's connect &rarr;</a>
+      <p class="legal">Your Name &middot; Personal Portfolio &middot; <span id="year">2026</span></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

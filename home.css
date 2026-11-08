@@ -1,0 +1,35 @@
+/* ==========================================================
+   HOME.CSS - styles for index.html only
+   ========================================================== */
+
+/* Hero */
+.hero { background: var(--forest); color: var(--ivory); padding-block: 40px 48px; }
+.hero h1 { max-width: 18ch; }
+.hero-lead { max-width: 60ch; color: rgba(245,240,231,.85); }
+.hero-media { aspect-ratio: 16 / 10; margin-block: 24px; max-height: 560px; }
+.hero-media img { object-position: center 20%; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* Introduction */
+.intro { padding-block: 56px; }
+.intro p { max-width: 62ch; color: #4a4f4c; }
+
+/* Professional path (two cards) */
+.path { padding-block: 56px; }
+.card-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+.card .media { aspect-ratio: 4 / 3; }
+.card h3 { margin-top: 14px; }
+.card p { color: var(--stone); font-size: .9rem; }
+
+/* Selected work */
+.selected { padding-block: 56px; }
+.selected .lead { color: var(--stone); max-width: 55ch; }
+.selected .card .media { aspect-ratio: 1 / 1; }
+
+@media (min-width: 640px) {
+  .card-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 900px) {
+  .hero { padding-block: 64px 72px; }
+  .hero-media { aspect-ratio: 21 / 9; }
+}
