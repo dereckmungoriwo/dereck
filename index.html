@@ -61,25 +61,48 @@
     </section>
     <hr class="divider">
 
-    <!-- PROFESSIONAL PATH -->
-    <section class="path">
-      <div class="container">
-        <p class="eyebrow">02 / My professional path</p>
-        <div class="card-grid">
-          <article class="card">
-            <div class="media"><img src="images/culinary.jpg" alt="Plated pastry dessert" onerror="this.style.display='none'"><button class="save-btn" data-id="path-culinary" aria-label="Save image" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button></div>
-            <h3>Culinary Arts</h3>
+   <!-- PROFESSIONAL PATH (2-slide auto-advancing presentation) -->
+<section class="path">
+  <div class="container">
+    <p class="eyebrow">02 / My professional path</p>
+
+    <div class="deck" id="pathDeck" aria-roledescription="carousel" aria-label="My professional path">
+      <div class="deck-viewport">
+        <div class="deck-track">
+
+          <article class="slide card" aria-roledescription="slide" aria-label="1 of 2">
+            <div class="media">
+              <img src="images/culinary.jpg" alt="Plated pastry dessert" onerror="this.style.display='none'">
+              <button class="save-btn" data-id="path-culinary" aria-label="Save image" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button>
+            </div>
+            <h3>Culinary Arts Presentation</h3>
             <p>6 years of professional pastry experience.</p>
           </article>
-          <article class="card">
-            <div class="media"><img src="images/technology.jpg" alt="Developer working on a laptop" onerror="this.style.display='none'"><button class="save-btn" data-id="path-tech" aria-label="Save image" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button></div>
+
+          <article class="slide card" aria-roledescription="slide" aria-label="2 of 2">
+            <div class="media">
+              <img src="images/technology.jpg" alt="Developer working on a laptop" onerror="this.style.display='none'">
+              <button class="save-btn" data-id="path-tech" aria-label="Save image" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button>
+            </div>
             <h3>Technology</h3>
-            <p>IT graduate with freelance experience.</p>
+            <p>IT Presentation.</p>
           </article>
+
+        </div>
+        <!-- arrows sit over the 16:9 image area only -->
+        <div class="deck-controls">
+          <button class="deck-nav prev" aria-label="Previous slide">&#8249;</button>
+          <button class="deck-nav next" aria-label="Next slide">&#8250;</button>
         </div>
       </div>
-    </section>
-    <hr class="divider">
+      <div class="deck-dots" role="tablist" aria-label="Choose slide">
+        <button role="tab" aria-label="Culinary Arts" class="active"></button>
+        <button role="tab" aria-label="Technology"></button>
+      </div>
+    </div>
+  </div>
+</section>
+<hr class="divider">
 
     <!-- SELECTED WORK -->
     <section class="selected">
