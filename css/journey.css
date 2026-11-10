@@ -27,6 +27,13 @@
 
 .chapter-card { display: grid; gap: 16px; }
 .chapter .media { aspect-ratio: 16 / 10; }
+
+/* Document slots: show the whole certificate, never crop it */
+.chapter .media.doc { background: #fff; border: 1px solid rgba(40,43,42,.15); box-shadow: 0 6px 20px rgba(23,37,33,.12); }
+.chapter .media.doc img { object-fit: contain; }
+.chapter .media.doc-a4 { aspect-ratio: 210 / 297; max-width: 320px; }      /* A4 portrait */
+.chapter .media.doc-letter { aspect-ratio: 11 / 8.5; }                      /* US Letter landscape */
+
 .chapter-label { font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: #8a7350; margin-bottom: 4px; }
 .chapter h2 { font-size: 1.5rem; margin-bottom: .25em; }
 .chapter .qual { font-weight: 600; margin-bottom: .4em; }
