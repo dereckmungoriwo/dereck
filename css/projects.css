@@ -1,0 +1,71 @@
+/* ==========================================================
+   PROJECTS.CSS - styles for projects.html only
+   ========================================================== */
+
+.proj-hero { background: var(--forest); color: var(--ivory); padding-block: 56px; }
+.proj-hero p:not(.eyebrow) { max-width: 60ch; color: rgba(245,240,231,.85); }
+.proj-hero .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+
+.collection { padding-block: 64px; scroll-margin-top: 90px; }
+.collection.alt { background: rgba(197,170,128,.12); }
+.collection .lead { color: var(--stone); max-width: 58ch; }
+
+/* ---------- Shared accordion ---------- */
+.acc-btn { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; cursor: pointer; background: none; border: 0; color: inherit; text-align: left; font: inherit; }
+.chev { width: 22px; height: 22px; flex: none; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; transition: transform .25s; }
+.acc-btn[aria-expanded="true"] .chev { transform: rotate(180deg); }
+.acc-panel { display: none; }
+.acc-panel.open { display: block; }
+.acc-panel h4 { font: 600 .75rem var(--font-body); letter-spacing: .08em; text-transform: uppercase; color: #8a7350; margin: 18px 0 6px; }
+.acc-panel h4:first-child { margin-top: 0; }
+.acc-panel p { color: #4a4f4c; font-size: .95rem; margin: 0; }
+.bullets { margin: 0; padding-left: 1.2rem; color: #4a4f4c; font-size: .93rem; }
+.bullets li { margin-bottom: 5px; }
+.chips.sm li { padding: 5px 12px; font-size: .8rem; }
+
+.tag-pill { position: absolute; left: 12px; bottom: 12px; padding: 5px 12px; border-radius: 999px; font-size: .7rem; letter-spacing: .06em; text-transform: uppercase; background: rgba(23,37,33,.85); color: var(--ivory); }
+
+/* ---------- Culinary: image-focused ---------- */
+.filters { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0 28px; }
+.filter { font: 600 .8rem var(--font-body); padding: 9px 16px; border-radius: 999px; cursor: pointer; border: 1px solid rgba(40,43,42,.3); background: transparent; color: var(--charcoal); }
+.filter[aria-pressed="true"] { background: var(--forest); color: var(--ivory); border-color: var(--forest); }
+
+.dish-grid { display: grid; grid-template-columns: 1fr; gap: 28px; }
+.dish[hidden] { display: none; }
+.dish { border: 1px solid rgba(40,43,42,.15); border-radius: var(--radius); background: rgba(255,255,255,.5); overflow: hidden; align-self: start; }
+.dish .media { aspect-ratio: 4 / 5; border-radius: 0; }
+.dish-btn { padding: 16px 18px; }
+.dish-btn .acc-title { font-family: var(--font-head); font-size: 1.15rem; font-weight: 600; line-height: 1.25; }
+.dish .acc-panel { padding: 0 18px 20px; }
+
+/* ---------- IT: detail-focused ---------- */
+.it-list { display: grid; gap: 28px; margin-top: 32px; }
+.it-card { border: 1px solid rgba(40,43,42,.18); border-radius: var(--radius); background: rgba(255,255,255,.6); padding: 20px; }
+.it-head { display: grid; gap: 18px; }
+.it-media { aspect-ratio: 16 / 10; }
+.it-summary h3 { font-size: 1.35rem; margin-bottom: .35em; }
+.it-summary p { color: #4a4f4c; font-size: .95rem; }
+.it-btn { margin-top: 6px; padding: 12px 16px; border: 1px solid rgba(40,43,42,.3); border-radius: var(--radius-sm); width: auto; font-weight: 600; font-size: .85rem; letter-spacing: .04em; text-transform: uppercase; }
+.it-btn:hover { border-color: var(--gold); }
+.it-panel { margin-top: 22px; padding-top: 6px; border-top: 1px solid rgba(40,43,42,.15); }
+.tech { padding-top: 6px; }
+.tech p, .tech .bullets { max-width: 70ch; }
+.tech .bullets li { margin-bottom: 8px; }
+
+/* ---------- CTA ---------- */
+.proj-cta { padding-block: 56px; }
+.cta-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+.btn-dark { background: var(--forest); color: var(--ivory); }
+.btn-dark:hover { background: #20352f; }
+
+@media (min-width: 640px) {
+  .dish-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 960px) {
+  .dish-grid { grid-template-columns: repeat(3, 1fr); }
+  .it-card { padding: 26px; }
+  .it-head { grid-template-columns: 5fr 7fr; gap: 32px; align-items: center; }
+  .it-panel { display: none; }
+  .it-panel.open { display: grid; grid-template-columns: 1fr 1fr; column-gap: 40px; }
+  .it-panel .tech:nth-child(1), .it-panel .tech:nth-child(4) { grid-column: 1 / -1; }
+}

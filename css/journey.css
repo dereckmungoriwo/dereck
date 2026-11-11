@@ -2,53 +2,113 @@
    JOURNEY.CSS - styles for journey.html only
    ========================================================== */
 
-.page-hero { background: var(--forest); color: var(--ivory); padding-block: 48px; }
-.page-hero p:not(.eyebrow) { max-width: 60ch; color: rgba(245,240,231,.85); margin: 0; }
+.page-hero { background: var(--forest); color: var(--ivory); padding-block: 56px; }
+.page-hero h1 { margin-bottom: .2em; }
+.page-hero .sub-title { font-family: var(--font-head); font-size: 1.3rem; color: var(--gold); margin-bottom: 1em; }
+.page-hero p:not(.eyebrow):not(.sub-title) { max-width: 62ch; color: rgba(245,240,231,.85); }
 
-.timeline-section { padding-block: 56px; }
+/* Two path cards (also act as jump links) */
+.path-cards { display: grid; gap: 16px; margin-top: 28px; }
+.path-card { display: block; padding: 22px; border-radius: var(--radius); border: 1px solid rgba(245,240,231,.25); transition: border-color .2s; }
+.path-card:hover { border-color: var(--gold); }
+.path-card .eyebrow { margin-bottom: .4rem; }
+.path-card h2 { font-size: 1.4rem; color: var(--ivory); margin-bottom: .3em; }
+.path-card p { margin: 0 0 .6em; color: rgba(245,240,231,.8); font-size: .95rem; }
+.path-card .go { color: var(--gold); font-size: .8rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
 
-/* Vertical line running through the chapters */
+/* ---------- Overview timeline ---------- */
+.overview { padding-block: 56px; }
+.legend { display: flex; flex-wrap: wrap; gap: 18px; margin: 12px 0 32px; font-size: .85rem; color: var(--stone); }
+.legend span::before { content: ""; display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; vertical-align: -1px; background: var(--forest); }
+.legend .l-it::before { background: var(--gold); }
+.legend .l-next::before { background: transparent; border: 2px solid var(--gold); }
+
 .timeline { list-style: none; margin: 0; padding: 0; position: relative; }
-.timeline::before {
-  content: ""; position: absolute; left: 19px; top: 8px; bottom: 8px;
-  width: 2px; background: var(--gold); opacity: .6;
-}
-
-.chapter { position: relative; padding-left: 60px; padding-bottom: 48px; }
-.chapter:last-child { padding-bottom: 0; }
-
-/* Numbered marker (real sequence, so numbers are meaningful) */
-.chapter-marker {
+.timeline::before { content: ""; position: absolute; left: 19px; top: 8px; bottom: 8px; width: 2px; background: var(--gold); opacity: .6; }
+.milestone { position: relative; padding-left: 60px; padding-bottom: 30px; }
+.milestone:last-child { padding-bottom: 0; }
+.marker {
   position: absolute; left: 0; top: 0; width: 40px; height: 40px; border-radius: 50%;
-  display: grid; place-items: center; background: var(--forest); color: var(--gold);
-  font: 600 .85rem var(--font-body); border: 2px solid var(--ivory);
+  display: grid; place-items: center; font: 600 .85rem var(--font-body);
+  background: var(--forest); color: var(--gold); border: 2px solid var(--ivory);
 }
-.chapter.current .chapter-marker { background: var(--gold); color: var(--forest); }
+.milestone.it .marker { background: var(--gold); color: var(--forest); }
+.milestone.next .marker { background: var(--ivory); color: #8a7350; border-color: var(--gold); }
+.milestone .when { font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: #8a7350; margin: 0 0 2px; }
+.milestone h3 { font-size: 1.1rem; margin-bottom: .15em; }
+.milestone p:last-child { margin: 0; color: var(--stone); font-size: .92rem; }
 
-.chapter-card { display: grid; gap: 16px; }
-.chapter .media { aspect-ratio: 16 / 10; }
+/* ---------- Chapter parts (A, B) ---------- */
+.part { padding-block: 64px; scroll-margin-top: 90px; }
+.part.alt { background: rgba(197,170,128,.12); }
+.part-head { margin-bottom: 32px; }
+.part-head p.intro-line { color: #4a4f4c; max-width: 62ch; margin: 0; }
 
-/* Document slots: show the whole certificate, never crop it */
-.chapter .media.doc { background: #fff; border: 1px solid rgba(40,43,42,.15); box-shadow: 0 6px 20px rgba(23,37,33,.12); }
-.chapter .media.doc img { object-fit: contain; }
-.chapter .media.doc-a4 { aspect-ratio: 210 / 297; max-width: 320px; }      /* A4 portrait */
-.chapter .media.doc-letter { aspect-ratio: 11 / 8.5; }                      /* US Letter landscape */
+.sub { display: grid; gap: 8px; padding-block: 28px; border-top: 1px solid rgba(40,43,42,.15); }
+.sub > h3 { font-family: var(--font-body); font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: #8a7350; margin: 0; }
+.sub p { color: #4a4f4c; max-width: 64ch; }
+.sub p:last-child { margin-bottom: 0; }
+.ticks, .bullets { margin: 8px 0 0; padding-left: 1.2rem; color: #4a4f4c; }
+.ticks li, .bullets li { margin-bottom: 6px; max-width: 64ch; }
 
-.chapter-label { font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: #8a7350; margin-bottom: 4px; }
-.chapter h2 { font-size: 1.5rem; margin-bottom: .25em; }
-.chapter .qual { font-weight: 600; margin-bottom: .4em; }
-.chapter .desc { color: #4a4f4c; max-width: 56ch; }
+/* Roles */
+.roles { display: grid; gap: 20px; }
+.role { padding: 22px; border: 1px solid rgba(40,43,42,.18); border-left: 4px solid var(--gold); border-radius: var(--radius-sm); background: rgba(255,255,255,.5); }
+.role.current { border-left-color: var(--forest); }
+.role h4 { font-family: var(--font-head); font-size: 1.15rem; margin: 0 0 4px; }
+.role .meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; font-size: .88rem; color: var(--stone); margin-bottom: 10px; }
+.badge { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: .7rem; letter-spacing: .06em; text-transform: uppercase; background: rgba(197,170,128,.3); color: #6b5836; }
+.badge.now { background: var(--forest); color: var(--gold); }
+.role ul { margin: 0; padding-left: 1.2rem; color: #4a4f4c; font-size: .93rem; }
+.role li { margin-bottom: 5px; }
 
-/* Closing call to action */
-.journey-cta { background: var(--forest); color: var(--ivory); padding-block: 48px; }
-.journey-cta .btn { margin-top: 8px; }
+/* ---------- Qualifications (C) ---------- */
+.quals { padding-block: 64px; scroll-margin-top: 90px; }
+.qual-list { list-style: none; margin: 32px 0 0; padding: 0; position: relative; }
+.qual-list::before { content: ""; position: absolute; left: 19px; top: 8px; bottom: 8px; width: 2px; background: var(--gold); opacity: .6; }
+.qual { position: relative; padding-left: 60px; padding-bottom: 36px; }
+.qual:last-child { padding-bottom: 0; }
+.qual-card { display: grid; gap: 20px; padding: 22px; border: 1px solid rgba(40,43,42,.18); border-radius: var(--radius); background: rgba(255,255,255,.5); }
+.qual .when { font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: #8a7350; margin: 0 0 4px; }
+.qual h3 { font-size: 1.3rem; }
+.qual .meta { color: var(--stone); font-size: .9rem; margin-bottom: .6em; }
+.qual p { color: #4a4f4c; font-size: .95rem; }
 
+/* Certificate images: whole document shown, never cropped */
+.media.doc { background: #fff; border: 1px solid rgba(40,43,42,.15); box-shadow: 0 6px 20px rgba(23,37,33,.12); width: 100%; }
+.media.doc img { object-fit: contain; }
+.doc-a4 { aspect-ratio: 210 / 297; max-width: 240px; }      /* A4 portrait */
+.doc-letter { aspect-ratio: 11 / 8.5; max-width: 340px; }   /* US Letter landscape */
+
+/* Additional certifications */
+.certs-block { margin-top: 56px; }
+.cert-grid { display: grid; gap: 16px; margin-top: 18px; }
+.cert { padding: 18px; border: 1px solid rgba(40,43,42,.18); border-radius: var(--radius-sm); background: rgba(255,255,255,.5); }
+.cert h4 { font-size: 1rem; margin: 10px 0 4px; font-family: var(--font-body); font-weight: 600; }
+.cert p { margin: 0; font-size: .85rem; color: var(--stone); }
+.badge.it { background: rgba(23,37,33,.1); color: var(--forest); }
+
+/* ---------- Resume call to action (D) ---------- */
+.resume-cta { background: var(--forest); color: var(--ivory); padding-block: 64px; scroll-margin-top: 90px; }
+.resume-cta p:not(.eyebrow) { max-width: 58ch; color: rgba(245,240,231,.85); }
+.cta-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+
+@media (min-width: 640px) {
+  .path-cards { grid-template-columns: 1fr 1fr; }
+  .cert-grid { grid-template-columns: 1fr 1fr; }
+}
 @media (min-width: 760px) {
+  /* Overview timeline alternates sides */
   .timeline::before { left: 50%; transform: translateX(-1px); }
-  .chapter { width: 50%; padding: 0 56px 56px 0; }
-  .chapter-marker { left: auto; right: -20px; }
-  /* Alternate chapters to the right side */
-  .chapter:nth-child(even) { margin-left: 50%; padding: 0 0 56px 56px; }
-  .chapter:nth-child(even) .chapter-marker { right: auto; left: -20px; }
-  .chapter:last-child { padding-bottom: 0; }
+  .milestone { width: 50%; padding: 0 56px 34px 0; text-align: right; }
+  .milestone .marker { left: auto; right: -20px; }
+  .milestone:nth-child(even) { margin-left: 50%; padding: 0 0 34px 56px; text-align: left; }
+  .milestone:nth-child(even) .marker { right: auto; left: -20px; }
+  .milestone:last-child { padding-bottom: 0; }
+
+  .sub { grid-template-columns: 220px 1fr; gap: 32px; }
+  .role { padding: 26px; }
+  .qual-card { grid-template-columns: auto 1fr; gap: 28px; align-items: center; }
+  .qual-card .media.doc { width: 280px; max-width: 280px; }
+  .cert-grid { grid-template-columns: repeat(3, 1fr); }
 }
