@@ -2,20 +2,42 @@
    HOME.CSS - styles for index.html only
    ========================================================== */
 
-/* Hero */
-.hero { background: var(--forest); color: var(--ivory); padding-block: 40px 48px; }
-.hero h1 { max-width: 18ch; }
-.hero-lead { max-width: 60ch; color: rgba(245,240,231,.85); }
+/* ---------- Hero ---------- */
+.hero { background: var(--forest); color: var(--ivory); padding-block: 40px 56px; }
 .hero-grid { display: grid; gap: 28px; align-items: center; }
-.hero-media { aspect-ratio: 4 / 5; width: 100%; max-width: 440px; }
-.hero-media img { object-position: center top; }
+.hero h1 { margin-bottom: .1em; }
+.headline { font-family: var(--font-head); font-size: clamp(1.3rem, 3.5vw, 1.8rem); color: var(--gold); margin-bottom: 1em; }
+.hero-lead { max-width: 56ch; color: rgba(245,240,231,.85); }
+.hero-media { aspect-ratio: 4 / 3; width: 100%; }
+.hero-media img { object-position: center 30%; }
 .hero-actions { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 12px; }
 
-/* Introduction */
+/* ---------- Introduction ---------- */
 .intro { padding-block: 56px; }
-.intro p { max-width: 62ch; color: #4a4f4c; }
+.intro p:not(.eyebrow) { max-width: 62ch; color: #4a4f4c; }
 
-/* Selected work cards */
+/* ---------- Career highlights ---------- */
+.highlights { padding-block: 56px; }
+.stat-grid { list-style: none; margin: 24px 0 20px; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.stat { padding: 20px; border: 1px solid rgba(40,43,42,.18); border-radius: var(--radius); background: rgba(255,255,255,.5); }
+.stat-value { display: block; font-family: var(--font-head); font-size: clamp(1.5rem, 5vw, 2.1rem); font-weight: 700; color: var(--forest); line-height: 1.1; margin-bottom: 6px; }
+.stat-label { display: block; font-size: .85rem; color: var(--stone); line-height: 1.4; }
+.text-link { display: inline-block; font-size: .8rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #8a7350; }
+.text-link:hover { color: var(--forest); }
+
+/* ---------- Two journeys ---------- */
+.journeys { padding-block: 56px; }
+.journey-grid { display: grid; gap: 16px; margin-top: 24px; }
+.journey-card { padding: 24px; border-radius: var(--radius); background: var(--forest); color: var(--ivory); }
+.journey-card:nth-child(2) { background: #20352f; }
+.path-label { font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); margin-bottom: .4rem; }
+.journey-card h3 { font-size: 1.4rem; }
+.journey-card p:not(.path-label) { color: rgba(245,240,231,.82); font-size: .95rem; }
+.journey-card .text-link { color: var(--gold); }
+
+/* ---------- Featured projects ---------- */
+.selected { padding-block: 56px; }
+.selected .lead { color: var(--stone); max-width: 55ch; }
 .card-grid { display: grid; grid-template-columns: 1fr; gap: 24px; margin-top: 24px; }
 .card .media { aspect-ratio: 4 / 3; }
 .media-link { display: block; width: 100%; height: 100%; }
@@ -25,15 +47,25 @@
 .card h3 a:hover { color: #8a7350; }
 .card p { color: var(--stone); font-size: .9rem; }
 
-/* Selected work */
-.selected { padding-block: 56px; }
-.selected .lead { color: var(--stone); max-width: 55ch; }
+/* ---------- Personal statement ---------- */
+.statement { background: var(--forest); color: var(--ivory); padding-block: 64px; }
+.statement blockquote { margin: 0 0 20px; max-width: 26ch; font-family: var(--font-head); font-size: clamp(1.6rem, 4.8vw, 2.5rem); line-height: 1.25; }
+.statement p:not(.eyebrow) { max-width: 60ch; color: rgba(245,240,231,.82); }
+
+/* ---------- Call to action ---------- */
+.cta { padding-block: 64px; }
+.cta p { color: #4a4f4c; max-width: 54ch; }
+.cta-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+.btn-dark { background: var(--forest); color: var(--ivory); }
+.btn-dark:hover { background: #20352f; }
+.btn-ghost { border-color: rgba(40,43,42,.5); color: var(--charcoal); background: transparent; }
+.btn-ghost:hover { border-color: var(--forest); background: rgba(23,37,33,.06); }
 
 @media (min-width: 640px) {
-  .card-grid { grid-template-columns: 1fr 1fr; }
+  .card-grid, .journey-grid { grid-template-columns: 1fr 1fr; }
+  .stat-grid { grid-template-columns: repeat(4, 1fr); }
 }
 @media (min-width: 900px) {
   .hero { padding-block: 64px 72px; }
-  .hero-grid { grid-template-columns: 6fr 5fr; gap: 56px; }
-  .hero-media { justify-self: end; }
+  .hero-grid { grid-template-columns: 6fr 6fr; gap: 56px; }
 }
