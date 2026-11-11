@@ -5,8 +5,9 @@
 .contact-hero { background: var(--forest); color: var(--ivory); padding-block: 56px; }
 .contact-hero p:not(.eyebrow) { max-width: 60ch; color: rgba(245,240,231,.85); margin: 0; }
 
-.contact-section { padding-block: 56px; }
-.contact-grid { display: grid; gap: 40px; }
+.contact-section { padding-block: 56px; overflow-x: clip; }  /* safety net: never let this section widen the page */
+.contact-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 40px; }
+.contact-info, .form-card { min-width: 0; }
 
 /* ---------- Left column ---------- */
 .contact-info .contact-description { color: #4a4f4c; max-width: 52ch; }
@@ -28,7 +29,8 @@
 .value { display: block; font-weight: 600; word-break: break-word; }
 
 /* Social tiles */
-.social-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.social-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.social-grid li, .channels li { min-width: 0; }
 .social-tile {
   display: flex; align-items: center; gap: 12px; padding: 12px 14px; min-width: 0;
   border: 1px solid rgba(40,43,42,.18); border-radius: var(--radius-sm); background: rgba(255,255,255,.5);
@@ -74,6 +76,6 @@
   .social-grid { gap: 14px; }
 }
 @media (min-width: 900px) {
-  .contact-grid { grid-template-columns: 6fr 5fr; gap: 56px; }
+  .contact-grid { grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: 56px; }
   .form-card { padding: 32px; position: sticky; top: 100px; }
 }
