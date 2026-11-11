@@ -11,10 +11,10 @@
 
 /* Story sections */
 .story { padding-block: 48px; }
-.story-grid { display: grid; gap: 24px; }
+.story-grid { display: grid; gap: 8px; }
+.story p:not(.eyebrow) { font-size: 1.05rem; }
 .story h2 { margin-bottom: .4em; }
 .story p { color: #4a4f4c; max-width: 60ch; }
-.story .media { aspect-ratio: 4 / 3; }
 
 /* Pull quote linking the two careers */
 .bridge { background: var(--forest); color: var(--ivory); padding-block: 56px; }
@@ -37,7 +37,5 @@
 @media (min-width: 760px) {
   .about-hero { padding-block: 72px; }
   .about-hero-grid { grid-template-columns: 5fr 6fr; gap: 56px; }
-  .story-grid { grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
-  .story.flip .media { order: 2; }
   .goal-list { grid-template-columns: repeat(3, 1fr); }
 }
