@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Projects | Your Name</title>
+  <meta name="description" content="Culinary creations and IT projects in networking and cloud computing.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/projects.css">
+</head>
+<body>
+
+  <!-- HEADER (same on every page) -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-top">
+        <a class="brand" href="index.html">Your Name.</a>
+        <span class="header-meta">Portfolio / 2026</span>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+      </div>
+      <nav class="main-nav" id="nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="journey.html">Journey</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="proj-hero on-dark">
+      <div class="container">
+        <p class="eyebrow">My projects</p>
+        <h1>What I've Created &amp; Accomplished</h1>
+        <p>Two collections, two experiences: culinary creations that you can see, and IT projects in networking and cloud computing that you can explore in technical detail.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#culinary">Culinary projects</a>
+          <a class="btn btn-outline" href="#it">IT projects</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- COLLECTION 1: CULINARY (image-focused) -->
+    <section class="collection" id="culinary">
+      <div class="container">
+        <p class="eyebrow">Collection 01</p>
+        <h2>Culinary Projects</h2>
+        <p class="lead">Main courses and pastry. Tap a dish to see how it was made.</p>
+        <div class="filters" role="group" aria-label="Filter dishes">
+          <button class="filter" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter" data-filter="main" aria-pressed="false">Main courses</button>
+          <button class="filter" data-filter="pastry" aria-pressed="false">Pastry</button>
+        </div>
+        <div class="dish-grid">
+          <article class="dish" data-cat="pastry">
+            <div class="media">
+              <img src="images/pastry-1.jpg" alt="Chocolate &amp; Raspberry Entremet" onerror="this.style.display='none'">
+              <span class="tag-pill">Pastry</span>
+              <button class="save-btn" data-id="dish-1" aria-label="Save image" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button>
+            </div>
+            <button class="acc-btn dish-btn" aria-expanded="false" aria-controls="dish-1">
+              <span class="acc-title">Chocolate &amp; Raspberry Entremet</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="acc-panel" id="dish-1">
+              <h4>Description</h4><p>A layered chocolate mousse cake with a raspberry centre and a glossy mirror glaze. Replace this text with the story behind your dish.</p>
+              <h4>Techniques used</h4><ul class="bullets"><li>Mousse construction and layering</li><li>Tempering chocolate</li><li>Mirror glaze</li><li>Plating and garnish</li></ul>
+              <h4>Key ingredients</h4><ul class="chips sm"><li>Dark chocolate</li><li>Raspberries</li><li>Cream</li><li>Gelatine</li><li>Sponge</li></ul>
+            </div>
+          </article>
+          <article class="dish" data-cat="pastry">
+            <div class="media">
+              <img src="images/pastry-2.jpg" alt="Passion Fruit Tart" onerror="this.style.display='none'">
+              <span class="tag-pill">Pastry</span>
+              <button class="save-btn" data-id="dish-2" aria-label="Save image" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button>
+            </div>
+            <button class="acc-btn dish-btn" aria-expanded="false" aria-controls="dish-2">
+              <span class="acc-title">Passion Fruit Tart</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="acc-panel" id="dish-2">
+              <h4>Description</h4><p>A crisp sweet pastry shell filled with a silky passion fruit crémeux and finished with torched meringue. Replace with your own description.</p>
+              <h4>Techniques used</h4><ul class="bullets"><li>Pâte sucrée and blind baking</li><li>Crémeux</li><li>Italian meringue</li><li>Torching</li></ul>
+              <h4>Key ingredients</h4><ul class="chips sm"><li>Passion fruit</li><li>Butter</li><li>Eggs</li><li>Sugar</li><li>Flour</li></ul>
+            </div>
+          </article>
+          <article class="dish" data-cat="pastry">
+            <div class="media">
+              <img src="images/pastry-3.jpg" alt="Laminated Croissants" onerror="this.style.display='none'">
+              <span class="tag-pill">Pastry</span>
+              <button class="save-btn" data-id="dish-3" aria-label="Save image" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button>
+            </div>
+            <button class="acc-btn dish-btn" aria-expanded="false" aria-controls="dish-3">
+              <span class="acc-title">Laminated Croissants</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="acc-panel" id="dish-3">
+              <h4>Description</h4><p>Golden, flaky croissants made with hand-laminated dough, produced in high volume for daily service. Replace with your own description.</p>
+              <h4>Techniques used</h4><ul class="bullets"><li>Lamination and folding</li><li>Proofing control</li><li>Shaping</li><li>Egg wash and baking</li></ul>
+              <h4>Key ingredients</h4><ul class="chips sm"><li>Butter</li><li>Strong flour</li><li>Yeast</li><li>Milk</li><li>Salt</li></ul>
+            </div>
+          </article>
+          <article class="dish" data-cat="main">
+            <div class="media">
+              <img src="images/main-1.jpg" alt="Seared Beef Fillet with Red Wine Jus" onerror="this.style.display='none'">
+              <span class="tag-pill">Main course</span>
+              <button class="save-btn" data-id="dish-4" aria-label="Save image" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button>
+            </div>
+            <button class="acc-btn dish-btn" aria-expanded="false" aria-controls="dish-4">
+              <span class="acc-title">Seared Beef Fillet with Red Wine Jus</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="acc-panel" id="dish-4">
+              <h4>Description</h4><p>A tender fillet cooked to temperature, served with creamy potato purée and a rich red wine jus. Replace with your own description.</p>
+              <h4>Techniques used</h4><ul class="bullets"><li>Searing and resting</li><li>Reduction sauce</li><li>Potato purée</li><li>Plating</li></ul>
+              <h4>Key ingredients</h4><ul class="chips sm"><li>Beef fillet</li><li>Red wine</li><li>Shallots</li><li>Thyme</li><li>Butter</li></ul>
+            </div>
+          </article>
+          <article class="dish" data-cat="main">
+            <div class="media">
+              <img src="images/main-2.jpg" alt="Herb-Crusted Rack of Lamb" onerror="this.style.display='none'">
+              <span class="tag-pill">Main course</span>
+              <button class="save-btn" data-id="dish-5" aria-label="Save image" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button>
+            </div>
+            <button class="acc-btn dish-btn" aria-expanded="false" aria-controls="dish-5">
+              <span class="acc-title">Herb-Crusted Rack of Lamb</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="acc-panel" id="dish-5">
+              <h4>Description</h4><p>Rack of lamb with a fragrant herb crust, roasted to a perfect pink and served with seasonal vegetables. Replace with your own description.</p>
+              <h4>Techniques used</h4><ul class="bullets"><li>Roasting</li><li>Herb crust</li><li>Jus preparation</li><li>Vegetable glazing</li></ul>
+              <h4>Key ingredients</h4><ul class="chips sm"><li>Lamb rack</li><li>Mixed herbs</li><li>Breadcrumbs</li><li>Dijon mustard</li><li>Seasonal vegetables</li></ul>
+            </div>
+          </article>
+          <article class="dish" data-cat="main">
+            <div class="media">
+              <img src="images/main-3.jpg" alt="Seared Salmon with Lemon Beurre Blanc" onerror="this.style.display='none'">
+              <span class="tag-pill">Main course</span>
+              <button class="save-btn" data-id="dish-6" aria-label="Save image" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button>
+            </div>
+            <button class="acc-btn dish-btn" aria-expanded="false" aria-controls="dish-6">
+              <span class="acc-title">Seared Salmon with Lemon Beurre Blanc</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="acc-panel" id="dish-6">
+              <h4>Description</h4><p>Crisp-skinned salmon with a light lemon butter sauce and fresh greens. Replace with your own description.</p>
+              <h4>Techniques used</h4><ul class="bullets"><li>Pan-searing for crisp skin</li><li>Beurre blanc emulsion</li><li>Seasoning and balance</li><li>Plating</li></ul>
+              <h4>Key ingredients</h4><ul class="chips sm"><li>Salmon fillet</li><li>Butter</li><li>White wine</li><li>Lemon</li><li>Shallots</li></ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- COLLECTION 2: IT (detail-focused) -->
+    <section class="collection alt" id="it">
+      <div class="container">
+        <p class="eyebrow">Collection 02</p>
+        <h2>IT Projects</h2>
+        <p class="lead">Networking and cloud computing. Open any project for the full technical explanation.</p>
+        <div class="it-list">
+          <article class="it-card">
+            <div class="it-head">
+              <div class="media it-media"><img src="images/it-project-1.jpg" alt="Small Office Network Design and Implementation" onerror="this.style.display='none'"><span class="tag-pill">Networking</span></div>
+              <div class="it-summary">
+                <h3>Small Office Network Design &amp; Implementation</h3>
+                <p>Designed and built a segmented network for a 25-user office, with separate staff, guest and server networks.</p>
+                <button class="acc-btn it-btn" aria-expanded="false" aria-controls="it-1">
+                  <span class="acc-title">Technical details</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="acc-panel it-panel" id="it-1">
+              <div class="tech"><h4>Project overview</h4><p>A small business needed a reliable, secure network where guests could not reach internal systems. I designed the topology, planned the addressing, and implemented and tested it in a simulated environment.</p></div>
+              <div class="tech"><h4>Objectives</h4><ul class="bullets"><li>Segment the network into separate VLANs for staff, guests and servers.</li><li>Plan an efficient IP addressing scheme that leaves room to grow.</li><li>Restrict guest access to the internet only.</li><li>Document the design so it can be maintained.</li></ul></div>
+              <div class="tech"><h4>My role</h4><p>I carried out the full design: topology, subnet plan, configuration and testing, and wrote the network documentation.</p></div>
+              <div class="tech"><h4>How it works</h4><ul class="bullets"><li><strong>Addressing:</strong> A /24 block was divided with VLSM into staff (VLAN 10), guest (VLAN 20) and server (VLAN 30) subnets, sized to each group.</li><li><strong>Switching and routing:</strong> Access switches carried the VLANs over trunk links to a router that handled inter-VLAN routing (router-on-a-stick).</li><li><strong>Services:</strong> DHCP scopes were created per VLAN, with static addresses for servers and DNS pointing to the internal server.</li><li><strong>Security:</strong> Access control lists blocked guest traffic from reaching staff and server VLANs while allowing internet access.</li></ul></div>
+              <div class="tech"><h4>Tools and technologies</h4><ul class="chips sm"><li>Cisco Packet Tracer</li><li>Cisco IOS</li><li>VLANs and trunking</li><li>Inter-VLAN routing</li><li>DHCP and DNS</li><li>ACLs</li><li>Wireshark</li></ul></div>
+              <div class="tech"><h4>Results and lessons</h4><p>All VLANs communicated as designed, and the guest network was fully isolated. I learned to plan addressing before touching a device, and to test every rule from both sides.</p></div>
+            </div>
+          </article>
+          <article class="it-card">
+            <div class="it-head">
+              <div class="media it-media"><img src="images/it-project-2.jpg" alt="Cloud Website Hosting and Deployment" onerror="this.style.display='none'"><span class="tag-pill">Cloud</span></div>
+              <div class="it-summary">
+                <h3>Cloud Website Hosting &amp; Deployment</h3>
+                <p>Hosted a website on a cloud platform with HTTPS, a content delivery network and automated deployment.</p>
+                <button class="acc-btn it-btn" aria-expanded="false" aria-controls="it-2">
+                  <span class="acc-title">Technical details</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="acc-panel it-panel" id="it-2">
+              <div class="tech"><h4>Project overview</h4><p>I wanted a fast, secure and low-cost way to host a website, and to automate updates so changes go live without manual uploads.</p></div>
+              <div class="tech"><h4>Objectives</h4><ul class="bullets"><li>Host the site on cloud storage with a custom domain and HTTPS.</li><li>Serve content globally through a CDN for speed.</li><li>Automate deployment from a code repository.</li><li>Keep access secure and costs low.</li></ul></div>
+              <div class="tech"><h4>My role</h4><p>I designed the architecture, configured the cloud services and DNS, and built the deployment pipeline.</p></div>
+              <div class="tech"><h4>How it works</h4><ul class="bullets"><li><strong>Hosting:</strong> Static files were stored in a cloud storage bucket and served through a CDN with an SSL/TLS certificate.</li><li><strong>DNS:</strong> The custom domain pointed to the CDN through DNS records.</li><li><strong>Security:</strong> A least-privilege identity and access policy limited what the deployment account could do.</li><li><strong>Automation:</strong> A pipeline pushed changes from the repository to the bucket and cleared the CDN cache on each release.</li></ul></div>
+              <div class="tech"><h4>Tools and technologies</h4><ul class="chips sm"><li>AWS or Azure (add yours)</li><li>Cloud storage</li><li>CDN</li><li>DNS</li><li>SSL/TLS</li><li>IAM</li><li>Git and CI/CD</li></ul></div>
+              <div class="tech"><h4>Results and lessons</h4><p>Deployments went from manual uploads to a single push, and page loads improved noticeably. I learned the value of least-privilege access and of monitoring cost from day one.</p></div>
+            </div>
+          </article>
+          <article class="it-card">
+            <div class="it-head">
+              <div class="media it-media"><img src="images/it-project-3.jpg" alt="Site-to-Site VPN and Network Monitoring Lab" onerror="this.style.display='none'"><span class="tag-pill">Networking</span></div>
+              <div class="it-summary">
+                <h3>Site-to-Site VPN &amp; Network Monitoring Lab</h3>
+                <p>Connected two branch networks with an encrypted VPN and set up monitoring to track network health.</p>
+                <button class="acc-btn it-btn" aria-expanded="false" aria-controls="it-3">
+                  <span class="acc-title">Technical details</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="acc-panel it-panel" id="it-3">
+              <div class="tech"><h4>Project overview</h4><p>Two branch offices needed to share resources securely over the internet, and the network team needed visibility into performance and faults.</p></div>
+              <div class="tech"><h4>Objectives</h4><ul class="bullets"><li>Create an encrypted tunnel between two sites.</li><li>Enable routing so both networks can reach each other.</li><li>Monitor device status, bandwidth and logs.</li><li>Test failure scenarios and recovery.</li></ul></div>
+              <div class="tech"><h4>My role</h4><p>I built the lab, configured the VPN and routing, and set up the monitoring and alerting.</p></div>
+              <div class="tech"><h4>How it works</h4><ul class="bullets"><li><strong>VPN:</strong> An IPsec tunnel was configured between the two edge routers with agreed encryption and authentication settings.</li><li><strong>Routing:</strong> A dynamic routing protocol (OSPF) advertised each site's networks across the tunnel.</li><li><strong>Monitoring:</strong> SNMP polling and syslog collection fed a monitoring dashboard showing uptime, bandwidth and alerts.</li><li><strong>Testing:</strong> I simulated a link failure and confirmed that alerts fired and traffic recovered.</li></ul></div>
+              <div class="tech"><h4>Tools and technologies</h4><ul class="chips sm"><li>IPsec VPN</li><li>OSPF</li><li>SNMP</li><li>Syslog</li><li>Zabbix or PRTG (add yours)</li><li>Linux</li><li>Troubleshooting</li></ul></div>
+              <div class="tech"><h4>Results and lessons</h4><p>Both sites communicated securely and alerts arrived within a minute of a fault. I learned how much of networking is methodical troubleshooting, one layer at a time.</p></div>
+            </div>
+          </article>
+          <article class="it-card">
+            <div class="it-head">
+              <div class="media it-media"><img src="images/it-project-4.jpg" alt="Cloud Virtual Network and Server Deployment" onerror="this.style.display='none'"><span class="tag-pill">Cloud</span></div>
+              <div class="it-summary">
+                <h3>Cloud Virtual Network &amp; Server Deployment</h3>
+                <p>Built a private virtual network in the cloud with public and private subnets and a hardened server.</p>
+                <button class="acc-btn it-btn" aria-expanded="false" aria-controls="it-4">
+                  <span class="acc-title">Technical details</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="acc-panel it-panel" id="it-4">
+              <div class="tech"><h4>Project overview</h4><p>I set out to understand how real cloud environments are structured, and to deploy a server that follows security best practice.</p></div>
+              <div class="tech"><h4>Objectives</h4><ul class="bullets"><li>Create an isolated virtual network with public and private subnets.</li><li>Deploy a Linux server and control access with firewall rules.</li><li>Back up data and recover it successfully.</li><li>Track usage and costs.</li></ul></div>
+              <div class="tech"><h4>My role</h4><p>I designed the network, deployed and secured the server, and tested backup and recovery.</p></div>
+              <div class="tech"><h4>How it works</h4><ul class="bullets"><li><strong>Network:</strong> A virtual private cloud was split into a public subnet (web tier) and a private subnet (application and data tier).</li><li><strong>Access:</strong> Security groups allowed only the required ports, with administrative access through a secured jump host and key-based login.</li><li><strong>Outbound traffic:</strong> A NAT gateway let private servers reach updates without being exposed to the internet.</li><li><strong>Resilience:</strong> Scheduled snapshots backed up data, and I restored a snapshot to prove recovery worked.</li></ul></div>
+              <div class="tech"><h4>Tools and technologies</h4><ul class="chips sm"><li>AWS or Azure (add yours)</li><li>Virtual private cloud</li><li>Security groups</li><li>Linux administration</li><li>SSH key authentication</li><li>Snapshots and backups</li><li>Cost monitoring</li></ul></div>
+              <div class="tech"><h4>Results and lessons</h4><p>The environment was secure by design and recoverable on demand. I learned how cloud networking maps onto traditional networking concepts.</p></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="proj-cta">
+      <div class="container">
+        <h2>Want the full story behind the work?</h2>
+        <div class="cta-actions">
+          <a class="btn btn-gold" href="journey.html">See my career journey</a>
+          <a class="btn btn-dark" href="contact.html">Get in touch</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (same on every page) -->
+  <footer class="site-footer">
+    <div class="container">
+      <h2>Every chapter has shaped who I am.</h2>
+      <p>Thank you for being part of my journey.</p>
+      <a class="connect" href="contact.html">Let's connect &rarr;</a>
+      <p class="legal">Your Name &middot; Personal Portfolio &middot; <span id="year">2026</span></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/projects.js"></script>
+</body>
+</html>

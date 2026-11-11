@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Journey | Your Name</title>
-  <meta name="description" content="A career timeline from professional pastry to Information Technology.">
+  <title>Career Journey: Work &amp; Education | Your Name</title>
+  <meta name="description" content="My career journey from professional pastry to Information Technology: work, education and qualifications.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
@@ -26,7 +26,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="journey.html">Journey</a></li>
-          <li><a href="resume.html">Resume</a></li>
+          <li><a href="projects.html">Projects</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -34,107 +34,261 @@
   </header>
 
   <main>
+
+    <!-- INTRO -->
     <section class="page-hero on-dark">
       <div class="container">
-        <p class="eyebrow">My journey</p>
-        <h1>My Career Journey</h1>
-        <p>Four chapters, from the pastry kitchen to a career in IT.</p>
+        <p class="eyebrow">My career history</p>
+        <h1>Explore My Career Journey</h1>
+        <p class="sub-title">Work &amp; Education</p>
+        <p>Two professional paths have shaped my career: six years in professional kitchens, and a growing career in Information Technology. This page documents both, in order, from my Diploma in Professional Cookery to my next chapter.</p>
+        <div class="path-cards">
+          <a class="path-card" href="#culinary">
+            <p class="eyebrow">Path A</p>
+            <h2>My Culinary Foundation</h2>
+            <p>Six years in professional kitchens, specialising in pastry.</p>
+            <span class="go">Read chapter A &darr;</span>
+          </a>
+          <a class="path-card" href="#it">
+            <p class="eyebrow">Path B</p>
+            <h2>Information Technology</h2>
+            <p>A Bachelor's degree, freelance work and a new career.</p>
+            <span class="go">Read chapter B &darr;</span>
+          </a>
+        </div>
       </div>
     </section>
 
-    <section class="timeline-section">
+    <!-- OVERVIEW TIMELINE -->
+    <section class="overview" id="timeline">
       <div class="container">
+        <p class="eyebrow">The big picture</p>
+        <h2>From the kitchen to technology</h2>
+        <div class="legend"><span>Culinary path</span><span class="l-it">IT path</span><span class="l-next">Next chapter</span></div>
         <ol class="timeline">
-        <li class="chapter">
-          <span class="chapter-marker" aria-hidden="true">01</span>
-          <article class="chapter-card">
-            <div class="media doc doc-a4"><img src="images/Diploma in Professional Cookery & Kitchen Management.jpg" alt="Diploma in Professional Cookery certificate" onerror="this.style.display='none'"><button class="save-btn" data-id="journey-01" aria-label="Save image" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button></div>
-            <div>
-              <p class="chapter-label">Chapter 01</p>
-              <h2>Culinary Foundations</h2>
-              <p class="qual">Diploma in Professional Cookery</p>
-              <p class="desc">Your introduction to professional culinary arts.</p>
-              <button class="more-btn" aria-expanded="false" aria-controls="details-01">Details</button>
-              <div class="details" id="details-01">
-                <dl>
-                  <dt>Dates</dt><dd>Add dates</dd>
-                  <dt>Where</dt><dd>Add employer or institution</dd>
-                  <dt>Highlights</dt><dd>Add achievements</dd>
-                </dl>
-              </div>
-            </div>
-          </article>
-        </li>
-        <li class="chapter">
-          <span class="chapter-marker" aria-hidden="true">02</span>
-          <article class="chapter-card">
-            <div class="media"><img src="images/chapter2.jpg" alt="Pastry chef plating a dessert" onerror="this.style.display='none'"><button class="save-btn" data-id="journey-02" aria-label="Save image" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button></div>
-            <div>
-              <p class="chapter-label">Chapter 02</p>
-              <h2>Professional Pastry</h2>
-              <p class="qual">Chef de Partie (Pastry), six years</p>
-              <p class="desc">Developing technical ability, creativity and professional discipline.</p>
-              <button class="more-btn" aria-expanded="false" aria-controls="details-02">Details</button>
-              <div class="details" id="details-02">
-                <dl>
-                  <dt>Dates</dt><dd>Add dates</dd>
-                  <dt>Where</dt><dd>Add employer or institution</dd>
-                  <dt>Highlights</dt><dd>Add achievements</dd>
-                </dl>
-              </div>
-            </div>
-          </article>
-        </li>
-        <li class="chapter">
-          <span class="chapter-marker" aria-hidden="true">03</span>
-          <article class="chapter-card">
-            <div class="media doc doc-letter"><img src="images/Bachelor of Information Technology.jpg" alt="Bachelor of Information Technology degree certificate" onerror="this.style.display='none'"><button class="save-btn" data-id="journey-03" aria-label="Save image" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button></div>
-            <div>
-              <p class="chapter-label">Chapter 03</p>
-              <h2>Exploring Technology</h2>
-              <p class="qual">Bachelor's Degree in Information Technology</p>
-              <p class="desc">Academic development and practical freelance experience.</p>
-              <button class="more-btn" aria-expanded="false" aria-controls="details-03">Details</button>
-              <div class="details" id="details-03">
-                <dl>
-                  <dt>Dates</dt><dd>Add dates</dd>
-                  <dt>Where</dt><dd>Add employer or institution</dd>
-                  <dt>Highlights</dt><dd>Add achievements</dd>
-                </dl>
-              </div>
-            </div>
-          </article>
-        </li>
-        <li class="chapter current">
-          <span class="chapter-marker" aria-hidden="true">04</span>
-          <article class="chapter-card">
-            <div class="media"><img src="images/chapter4.jpg" alt="Laptop showing code" onerror="this.style.display='none'"><button class="save-btn" data-id="journey-04" aria-label="Save image" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button></div>
-            <div>
-              <p class="chapter-label">Chapter 04 &middot; Now</p>
-              <h2>The Next Chapter</h2>
-              <p class="qual">Building a career in IT</p>
-              <p class="desc">Applying technical knowledge, expanding experience and pursuing new opportunities.</p>
-              <button class="more-btn" aria-expanded="false" aria-controls="details-04">Details</button>
-              <div class="details" id="details-04">
-                <dl>
-                  <dt>Dates</dt><dd>Add dates</dd>
-                  <dt>Where</dt><dd>Add employer or institution</dd>
-                  <dt>Highlights</dt><dd>Add achievements</dd>
-                </dl>
-              </div>
-            </div>
-          </article>
-        </li>
+          <li class="milestone culinary"><span class="marker" aria-hidden="true">1</span>
+            <p class="when">Add year</p><h3>Diploma in Professional Cookery</h3><p>Where the culinary path began, with HACCP and ServSafe certifications.</p></li>
+          <li class="milestone culinary"><span class="marker" aria-hidden="true">2</span>
+            <p class="when">Add dates</p><h3>Chef Trainee</h3><p>Protea Hotel Fire &amp; Ice by Marriott. First steps in a professional kitchen.</p></li>
+          <li class="milestone culinary"><span class="marker" aria-hidden="true">3</span>
+            <p class="when">Add dates</p><h3>Commis Chef – Pastry</h3><p>Casa Toscana Lodge. Specialising in pastry.</p></li>
+          <li class="milestone culinary"><span class="marker" aria-hidden="true">4</span>
+            <p class="when">Add dates</p><h3>Demi Chef de Partie</h3><p>Holiday Inn Hotel. Banquets and conferences for up to 300 guests.</p></li>
+          <li class="milestone culinary"><span class="marker" aria-hidden="true">5</span>
+            <p class="when">Add dates</p><h3>Chef de Partie – Pastry</h3><p>Iris Garden Restaurant. Leading high-volume pastry production.</p></li>
+          <li class="milestone it"><span class="marker" aria-hidden="true">6</span>
+            <p class="when">Add dates</p><h3>Bachelor's Degree in Information Technology</h3><p>Where the technology path began.</p></li>
+          <li class="milestone it"><span class="marker" aria-hidden="true">7</span>
+            <p class="when">Add dates</p><h3>Freelance IT work</h3><p>Real projects for real clients, alongside my studies.</p></li>
+          <li class="milestone next"><span class="marker" aria-hidden="true">8</span>
+            <p class="when">Now</p><h3>The next professional chapter</h3><p>Building a career in IT.</p></li>
         </ol>
       </div>
     </section>
 
-    <section class="journey-cta on-dark">
+    <!-- A. CULINARY -->
+    <section class="part alt" id="culinary">
       <div class="container">
-        <h2>See what each chapter produced.</h2>
-        <a class="btn btn-gold" href="resume.html">View my work &rarr;</a>
+        <header class="part-head">
+          <p class="eyebrow">Chapter A</p>
+          <h2>My Culinary Foundation</h2>
+          <p class="intro-line">This section documents my six years in the culinary industry.</p>
+        </header>
+
+        <div class="sub">
+          <h3>How it started</h3>
+          <div>
+            <p>My interest in culinary arts began with a simple love of food and the satisfaction of making something people enjoy. Cooking at home turned into curiosity about how professional kitchens work, and I decided to turn that passion into a career.</p>
+            <p>I enrolled in a Diploma in Professional Cookery, where I learned the core of the trade: knife skills, stocks and sauces, pastry and bakery fundamentals, menu planning, and how a professional kitchen runs. I also earned my HACCP and ServSafe food safety certifications, which shaped the standards I still work to.</p>
+            <ul class="ticks">
+              <li>Diploma in Professional Cookery</li>
+              <li>HACCP food safety certification</li>
+              <li>ServSafe food safety certification</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sub">
+          <h3>Professional experience</h3>
+          <div class="roles">
+          <article class="role current">
+            <h4>Chef de Partie – Pastry</h4>
+            <p class="meta"><span>Iris Garden Restaurant</span><span>Add dates</span><span class="badge now">Most recent</span></p>
+            <ul><li>Manage high-volume pastry and bakery production of 200+ items daily, including plated desserts, cakes, laminated pastries and ice creams.</li><li>Create custom cakes and desserts using advanced decorating techniques, glazing, fondant, sugar work and chocolate garnishes.</li><li>Supervise and train junior pastry chefs, ensuring consistent quality, efficient workflow and timely production.</li><li>Collaborate with management on new dessert creations, accommodating dietary requirements and allergies.</li><li>Manage stock control, ingredient quality, FIFO rotation and waste reduction.</li><li>Maintain HACCP compliance, including food safety, sanitation, temperature monitoring and equipment inspections.</li></ul>
+          </article>
+          <article class="role">
+            <h4>Demi Chef de Partie</h4>
+            <p class="meta"><span>Holiday Inn Hotel</span><span>Add dates</span><span class="badge ">Previous role</span></p>
+            <ul><li>Supported pastry production for restaurants, buffets, banquets and conferences serving up to 300 guests.</li><li>Prepared a variety of desserts and pastries according to standardised recipes and presentation standards.</li><li>Assisted in training junior staff, coordinating mise en place and managing production schedules.</li><li>Maintained inventory, stock rotation and food cost control through FIFO procedures.</li><li>Ensured compliance with HACCP, hygiene and food safety standards.</li></ul>
+          </article>
+          <article class="role">
+            <h4>Commis Chef – Pastry</h4>
+            <p class="meta"><span>Casa Toscana Lodge</span><span>Add dates</span><span class="badge ">Previous role</span></p>
+            <ul><li>Prepared daily mise en place and assisted with mousses, crème brûlée, pastry creams and chocolate sauces.</li><li>Supported banquet and conference catering for 300+ guests while maintaining quality and presentation.</li><li>Followed standardised recipes, production schedules and portion control guidelines.</li><li>Assisted with stock management, equipment maintenance and HACCP-compliant kitchen sanitation.</li></ul>
+          </article>
+          <article class="role">
+            <h4>Chef Trainee</h4>
+            <p class="meta"><span>Protea Hotel Fire &amp; Ice by Marriott</span><span>Add dates</span><span class="badge ">Earlier role</span></p>
+            <ul><li>Assisted with breakfast, lunch, dinner and banquet food preparation for high-volume service.</li><li>Supported conference and catering operations serving 300+ guests.</li><li>Developed foundational skills in food preparation, kitchen operations, teamwork, hygiene and sanitation.</li></ul>
+          </article>
+          </div>
+        </div>
+
+        <div class="sub">
+          <h3>Skills developed</h3>
+          <div>
+            <ul class="chips"><li>Pastry and dessert production</li><li>Plating and presentation</li><li>Team leadership and training</li><li>Stock control and FIFO</li><li>HACCP and food safety</li><li>Working under pressure</li></ul>
+          </div>
+        </div>
+
+        <div class="sub">
+          <h3>Memorable highlights</h3>
+          <ul class="bullets">
+            <li>Add a highlight, such as a signature dessert you created for the menu.</li>
+            <li>Add a highlight, such as a large event or banquet you helped deliver.</li>
+            <li>Add a highlight, such as a promotion, award or a junior chef you trained.</li>
+          </ul>
+        </div>
       </div>
     </section>
+
+    <!-- B. IT -->
+    <section class="part" id="it">
+      <div class="container">
+        <header class="part-head">
+          <p class="eyebrow">Chapter B</p>
+          <h2>Information Technology</h2>
+          <p class="intro-line">The second path: from curiosity about technology to a degree, real client work and a new career.</p>
+        </header>
+
+        <div class="sub">
+          <h3>How it started</h3>
+          <div>
+            <p>Working in busy kitchens taught me to love systems: clear processes, good tools and teams that run smoothly. Alongside that, I became curious about the technology behind the websites and apps I used every day, and I started to teach myself how they are built.</p>
+            <p>That curiosity grew into a decision to study properly, and I began pursuing a Bachelor's Degree in Information Technology.</p>
+          </div>
+        </div>
+
+        <div class="sub">
+          <h3>Academic experience</h3>
+          <div>
+            <p>My degree covered the foundations of the field and let me explore the areas that interest me most.</p>
+            <ul class="bullets">
+              <li>Studied programming fundamentals, web development, databases, networking and systems analysis.</li>
+              <li>Completed practical projects and a final-year project.</li>
+              <li>Areas of interest: front-end development, user experience and cloud technology.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sub">
+          <h3>Freelance experience</h3>
+          <ul class="bullets">
+            <li>Designed and built responsive websites for small businesses and individuals.</li>
+            <li>Worked directly with clients to understand their needs and deliver on deadline.</li>
+            <li>Maintained and updated existing websites and fixed performance and layout issues.</li>
+            <li>Managed projects independently, from the first brief to the final handover.</li>
+          </ul>
+        </div>
+
+        <div class="sub">
+          <h3>Technical skills</h3>
+          <div>
+            <ul class="chips"><li>HTML and CSS</li><li>JavaScript</li><li>Responsive design</li><li>Git and GitHub</li><li>SQL and databases</li><li>Networking basics</li><li>Troubleshooting</li></ul>
+          </div>
+        </div>
+
+        <div class="sub">
+          <h3>Responsibilities</h3>
+          <ul class="bullets">
+            <li>Gathered requirements and planned each project with the client.</li>
+            <li>Designed layouts, wrote the code and tested across devices and browsers.</li>
+            <li>Communicated progress and handled feedback and revisions.</li>
+            <li>Supported clients after launch with updates and fixes.</li>
+          </ul>
+        </div>
+
+        <div class="sub">
+          <h3>Achievements</h3>
+          <ul class="bullets">
+            <li>Completed freelance projects for clients (add the number and types).</li>
+            <li>Academic achievements, such as a distinction or a standout project (add yours).</li>
+            <li>Milestones, such as a first paying client or a published portfolio (add yours).</li>
+          </ul>
+        </div>
+
+        <div class="sub">
+          <h3>Career goals</h3>
+          <p>I want to build a long-term career in IT, starting in a role where I can keep learning and contribute from day one. Over time I aim to specialise, grow into leadership and combine the discipline of my kitchen background with technical skill.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- C. EDUCATION & QUALIFICATIONS -->
+    <section class="quals part alt" id="qualifications">
+      <div class="container">
+        <header class="part-head">
+          <p class="eyebrow">Chapter C</p>
+          <h2>Education &amp; Qualifications</h2>
+          <p class="intro-line">Two qualifications, in order, with my certificates.</p>
+        </header>
+
+        <ol class="qual-list">
+          <li class="qual"><span class="marker" aria-hidden="true">1</span>
+            <article class="qual-card">
+              <div class="media doc doc-a4"><img src="images/diploma-certificate.jpg" alt="Diploma in Professional Cookery certificate" onerror="this.style.display='none'"></div>
+              <div>
+                <p class="when">Completed: Add year</p>
+                <h3>Diploma in Professional Cookery</h3>
+                <p class="meta">Add institution</p>
+                <p>A practical qualification in professional cookery. Courses studied: culinary theory, pastry and bakery, stocks and sauces, kitchen operations, and food safety and hygiene.</p>
+              </div>
+            </article>
+          </li>
+          <li class="qual"><span class="marker" aria-hidden="true">2</span>
+            <article class="qual-card">
+              <div class="media doc doc-letter"><img src="images/degree-certificate.jpg" alt="Bachelor's Degree in Information Technology certificate" onerror="this.style.display='none'"></div>
+              <div>
+                <p class="when">Completed: Add year</p>
+                <h3>Bachelor's Degree in Information Technology</h3>
+                <p class="meta">Add institution</p>
+                <p>A degree covering the foundations of IT. Courses studied: programming, web development, databases, networking and systems analysis.</p>
+              </div>
+            </article>
+          </li>
+        </ol>
+
+        <div class="certs-block">
+          <h3>Additional certifications</h3>
+          <div class="cert-grid">
+            <article class="cert"><span class="badge it">IT</span>
+              <h4>IT certification 1</h4><p>Add issuer &middot; Add year</p></article>
+            <article class="cert"><span class="badge it">IT</span>
+              <h4>IT certification 2</h4><p>Add issuer &middot; Add year</p></article>
+            <article class="cert"><span class="badge it">IT</span>
+              <h4>IT certification 3</h4><p>Add issuer &middot; Add year</p></article>
+            <article class="cert"><span class="badge ">Culinary</span>
+              <h4>HACCP Food Safety Certification</h4><p>Add issuer &middot; Add year</p></article>
+            <article class="cert"><span class="badge ">Culinary</span>
+              <h4>ServSafe Food Safety Certification</h4><p>Add issuer &middot; Add year</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- D. RESUME CTA -->
+    <section class="resume-cta on-dark" id="resume-download">
+      <div class="container">
+        <p class="eyebrow">My resume</p>
+        <h2>Want to Know More About My Professional Experience?</h2>
+        <p>Explore my professional background, qualifications, technical skills and work experience in more detail.</p>
+        <div class="cta-actions">
+          <a class="btn btn-gold" href="files/resume.pdf" download="Your-Name-Resume.pdf">Download My Resume (PDF)</a>
+          <a class="btn btn-outline" href="files/resume.pdf" target="_blank" rel="noopener">View My Resume</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- FOOTER (same on every page) -->
